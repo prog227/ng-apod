@@ -1,12 +1,14 @@
-import { TestBed } from '@angular/core/testing';
+import { Injectable } from '@angular/core';
 
-import { ApodService } from './apod.service';
+@Injectable({
+  providedIn: 'root'
+})
+export class ApodService {
 
-describe('ApodService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  constructor() { }
 
-  it('should be created', () => {
-    const service: ApodService = TestBed.get(ApodService);
-    expect(service).toBeTruthy();
-  });
-});
+  getApod(): string{
+    return 'Hello World';
+  }
+
+}
