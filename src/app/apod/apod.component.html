@@ -1,5 +1,5 @@
 <main *ngIf="apod">
-
+    <button *ngIf="date" [routerLink]="['/apod', this.date]">Random</button>
     <h1>{{ apod.title }}</h1>
   
     <!-- Only show the image element if the media_type is set to image -->
